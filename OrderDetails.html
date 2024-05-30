@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    
+        <!-- header樣式 -->
+        <link rel="stylesheet" href="./_style/myshare.css">
+
+    <style>
+       
+        .block #OrderListTatble tr td img {
+            object-fit: cover;
+            height: 100px;
+            height: 100px;
+        }
+
+        body #myscore{
+            border-style: initial;
+            height: 200px;
+            border: 1px solid #3A326D;
+        }
+
+       
+        #star {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        #star:hover {
+            cursor: pointer;
+        }
+
+        .rank-rated {
+            color: #f6be00;
+        }
+
+        .rank-not-rated {
+            color: #a2a2a2;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+       <header>
+        <div class="container-fluid px-0 ">
+            <div class="row row-cols-1">
+                <div class="col">
+                    <div class="col fixed-top"> <!-- 固定上方 -->
+
+
+                        <nav class="navbar navbar-expand-sm " id="head">
+                            <img src="./_img/logo.png" alt="" width="200px">
+                            <div class="container-fluid justify-content-end  px-0">
+                                <!-- 大小切換 -->
+                                <button type="button" class="btn btn-outline-secondary m-1" id="big">大</button>
+                                <button type="button" class="btn btn-outline-secondary m-2" id="sm">小</button>
+                                <!-- 頁首 -->
+                                <ul class="navbar-nav ">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">旅遊資訊</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">自訂行程</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">景點介紹</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">會員登入</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+    </header>
+
+
+
+
+    <div class="container">
+
+        <div>
+            <h1 class="text-center">TripNa Member Center</h1>
+
+            <h4 id="title" class="text-center"> 會員中心</h4>
+        </div>
+
+
+
+        <br>
+
+        <div id="topIcon" class="row">
+
+            <div class="col-sm-2 text-center"></div>
+
+            <div class="col-sm-8 text-center">
+                <a href="myorder.html"><img src="./_img/png/click_myorder.png" alt=""></a>
+                <a href="mycoupon.html"><img src="./_img/png/coupon.png" alt=""></a>
+                <a href="mycollect.html"><img src="./_img/png/likelist.png" alt=""></a>
+                <a href="/mydata.html"><img src="./_img/png/mydata.png" alt=""></a>
+                <a href="/sign.html"><img src="./_img/png/sign.png" alt=""></a>
+            </div>
+
+            <div class="col-sm-2 text-center"></div>
+
+        </div>
+
+
+        <hr style='background-color:#3A326D; height:1px; border:none;'>
+
+
+
+
+        <table id="listtable" class="table table-striped table-hover">
+
+            <thead>
+                <tr id="trTitle">
+                    <th class="text-center">
+                        產品名稱
+                    </th>
+                    <th class="text-center">
+                        地區
+                    </th>
+                    <th class="text-center">
+                        出發日期
+                    </th>
+                    <th class="text-center">
+                        人數
+                    </th>
+                    <th class="text-center">
+                        天數
+                    </th>
+                    <th class="text-center">
+                        金額
+                    </th>
+                    <th class="text-center">
+                        導遊
+                    </th>
+                    <th class="text-center">
+                        訂單狀態
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr id="trContent">
+                    <td class="text-center  ">
+                        <a href="javascript:"
+                            onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'">台中一日遊暢玩行程▼</a>
+
+
+                    <td class="text-center">
+                        台中
+                    </td>
+
+
+
+                    <td class="text-center">
+                        2024-04-15
+                    </td>
+
+                    <td class="text-center">
+                        2
+                    </td>
+
+                    <td class="text-center">
+                        1
+                    </td>
+
+                    <td class="text-center">
+                        NT$2000
+                    </td>
+
+                    <td class="text-center">
+                        <img src="./_img/png/導遊.png" style="border-radius: 50%;" height="50px " width="50px">
+                        <br>
+                        派大星
+
+                    </td>
+
+                    <td class="text-center">
+                        訂單完成
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <div class="block" id="fullContent" style="display:none;">
+
+            <table id="OrderListTatble" class="table table-striped ">
+
+                <tr id="trOrderList">
+                    <td>
+
+                    </td>
+
+                    <td class="text-center">
+                        <br>
+                        <img src="./_img/journey/cvnmiwjfbm5.jpg">
+                        <br>
+                        知高圳步道
+                        <br>
+
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="./_img/journey/TC-2.jpg" height="100px " width="100px">
+                        <br>
+                        筏子溪
+                        <br>
+
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="./_img/journey/TC-3.jpg" height="100px " width="100px">
+                        <br>
+                        宮太鮮小籠湯包
+                        <br>
+
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="./_img/journey/TC-beer.jpg" height="100px " width="100px">
+                        <br>
+                        烏日啤酒觀光工廠
+                        <br>
+
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="./_img/journey/TC-gu.jpg" height="100px " width="100px">
+                        <br>
+                        聚奎居
+                        <br>
+
+                    </td>
+
+
+
+
+                </tr>
+
+            </table>
+        </div>
+
+        <br>
+
+
+        <div id="myDetail">
+
+            <table class="table ">
+
+                <thead>
+                    <tr>
+                        <th colspan="2" scope="col">訂單資訊</th>
+                        <th colspan="2" scope="col">訂購人資訊</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">訂單編號</th>
+                        <td>202403210001</td>
+                        <th scope="row">姓名</th>
+                        <td>游婷婷</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">訂購時間</th>
+                        <td>2024-03-21 11:17:00</td>
+                        <th scope="row">手機</th>
+                        <td>0932259451</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">訂單狀態</th>
+                        <td>訂單完成</td>
+                        <th scope="row">E-mail</th>
+                        <td>jua78958@gmail.com</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <br>
+
+
+
+
+
+        <br>
+
+        <!-- 評價導遊的地方 -->
+
+        <div id="scorezone">
+            <h3 class="text-center">評價導遊</h3>
+            <div id="myscore">
+                <br>
+                <span style="margin: 10px;">導遊評價：</span>
+
+                <span id="star">
+
+                    <span class="rank-not-rated" data-rating="1">&#128970;</span>
+                    <span class="rank-not-rated" data-rating="2">&#128970;</span>
+                    <span class="rank-not-rated" data-rating="3">&#128970;</span>
+                    <span class="rank-not-rated" data-rating="4">&#128970;</span>
+                    <span class="rank-not-rated" data-rating="5">&#128970;</span>
+                    <span id="score" style="color: #3A326D; font-size: 15px;"></span>
+                </span>
+<br>
+<br>
+
+                <textarea type="text" placeholder="輸入您的評價" id="write"
+                    style="resize:none; height: 120px ; width:100% ; background-color: #cacde4;color: #3A326D ;"></textarea>
+            </div>
+
+
+            <br>
+            <div id="endBtn" class="row">
+
+                <div class="col-10 text-center"></div>
+
+
+                <div class="col-2 text-end">
+                    <button id="submitBtn " class="btn" style="background-color: #4e5482 ;color: #e8eafe;">送出評價</button>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        var isShow = false;
+        function show22() {
+            if (!isShow) {
+                isShow = true;
+                document.getElementById('hide22').style.display = '';
+                document.getElementById('show22').innerText = "回覆";
+            }
+            else {
+                isShow = false;
+                document.getElementById('hide22').style.display = 'none';
+                document.getElementById('show22').innerText = "回覆";
+            }
+        }
+
+
+
+        let currentRating = 0;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('#star span');
+
+            stars.forEach(star => {
+                star.addEventListener('click', function () {
+                    const rating = this.getAttribute('data-rating');
+                    currentRating = rating;
+
+                    stars.forEach(s => {
+                        if (s.getAttribute('data-rating') <= rating) {
+                            s.classList.remove('rank-not-rated');
+                            s.classList.add('rank-rated');
+                        } else {
+                            s.classList.remove('rank-rated');
+                            s.classList.add('rank-not-rated');
+                        }
+                    });
+                    $("#score").text("(" + currentRating + "顆星)");
+                    // console.log("當前評分: " + currentRating);
+                });
+            });
+        });
+
+
+
+
+
+
+
+        //#OrderListTatble
+
+        // var id = sessionStorage.getItem("id");
+        var index = sessionStorage.getItem("index");
+
+
+
+        var getUrl = "./_file/orderlist.json";
+
+        $("#trContent").empty();
+
+        $.get(getUrl, function (e) {
+            todoItem = e;
+            console.log(todoItem);
+            console.log(index);
+
+            //根據點擊到的訂單 顯示該訂單的內容
+
+
+            if (todoItem[index].OrderStatus === "導遊媒合中") {
+                $("#scorezone").empty();
+                $("#trContent").append(`            
+            <td class="text-center  ">
+                        <a href="javascript:"
+                            onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'">
+                            ${todoItem[index].ProductName}▼
+                            </a>
+
+                    <td class="text-center">
+                        ${todoItem[index].Location}
+                    </td>
+
+                    <td class="text-center">
+                        ${todoItem[index].TravelDate}
+                    </td>                    
+                    
+                    <td class="text-center">
+                        ${todoItem[index].Number_of_People}
+                    </td>
+
+                    <td class="text-center">
+                        ${todoItem[index].Duration}
+                    </td>
+
+                    <td class="text-center">
+                        NT${todoItem[index].Money}
+                    </td>
+
+
+                    <td class="text-center">
+                        ${todoItem[index].OrderStatus}
+
+                    </td>
+
+                    <td class="text-center">
+                        ${todoItem[index].OrderStatus}
+                    </td>           
+            
+            `);
+
+            }
+
+            else{
+                $("#trContent").append(`            
+            <td class="text-center  ">
+                        <a href="javascript:"
+                            onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'">
+                            ${todoItem[index].ProductName}▼
+                            </a>
+
+                    <td class="text-center">
+                        ${todoItem[index].Location}
+                    </td>
+
+                    <td class="text-center">
+                        ${todoItem[index].TravelDate}
+                    </td>                    
+                    
+                    <td class="text-center">
+                        ${todoItem[index].Number_of_People}
+                    </td>
+
+                    <td class="text-center">
+                        ${todoItem[index].Duration}
+                    </td>
+
+                    <td class="text-center">
+                        NT${todoItem[index].Money}
+                    </td>
+
+
+                    <td class="text-center">
+                        <img src="${todoItem[index].TourGuide.ImageURL}" style="border-radius: 50%;" height="50px " width="50px">
+                        <br>
+                        ${todoItem[index].TourGuide.TourGuideName}
+                    </td>
+
+                    <td class="text-center">
+                        ${todoItem[index].OrderStatus}
+                    </td>           
+            
+            `);
+
+            }
+          
+
+
+            if (todoItem[index].Duration == 1) {
+                $("#trOrderList").empty();
+
+                $("#trOrderList").append(`
+
+//  一日遊
+
+      <td class="text-center">
+            <img src="${todoItem[index].Day.Morning.ImageURL}" height="100px " width="100px">
+            <br>                        
+            ${todoItem[index].Day.Morning.Location}
+        </td>
+
+
+        <td class="text-center">
+            <img src="${todoItem[index].Day.Noon.ImageURL}" height="100px " width="100px">
+            <br>
+            ${todoItem[index].Day.Noon.Location}
+        </td>
+
+
+        <td class="text-center">
+            <img src="${todoItem[index].Day.Afternoon.ImageURL}" height="100px " width="100px">
+            <br>
+            ${todoItem[index].Day.Afternoon.Location}
+
+        </td>
+
+
+        <td class="text-center">
+            <img src="${todoItem[index].Day.Evening.ImageURL}" height="100px " width="100px">
+            <br>
+            ${todoItem[index].Day.Evening.Location}
+        </td>
+
+
+`);
+
+            }
+            else if (todoItem[index].Duration == 2) {
+                $("#trOrderList").empty();
+
+                $("#trOrderList").append(`
+
+                //  二日遊
+
+
+                       <td>
+                        <br>
+
+                        Day1
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>                        
+                        <br>
+                        <br>
+
+
+                        Day2
+
+                    </td>
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Morning.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Morning.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Morning.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Morning.Location}
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Noon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Noon.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Noon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Noon.Location}
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Afternoon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Afternoon.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Afternoon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Afternoon.Location}
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Evening.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Evening.Location}
+                        <br>
+
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Evening.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Evening.Location}
+                    </td>
+
+                
+                
+                `);
+
+            }
+
+            else if (todoItem[index].Duration == 3) {
+                $("#trOrderList").empty();
+
+                $("#trOrderList").append(`
+                <td>
+                        <br>
+
+                        Day1
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>                        
+                        <br>
+                        <br>
+
+
+                        Day2
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>                        
+                        <br>
+                        <br>
+
+                        Day3
+
+                    </td>
+
+                
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Morning.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Morning.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Morning.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Morning.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day3.Morning.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day3.Morning.Location}
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Noon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Noon.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Noon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Noon.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day3.Noon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day3.Noon.Location}
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Afternoon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Afternoon.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Afternoon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Afternoon.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day3.Afternoon.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day3.Afternoon.Location}
+                    </td>
+
+
+                    <td class="text-center">
+                        <br>
+                        <img src="${todoItem[index].Day1.Evening.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day1.Evening.Location}
+                        <br>
+
+
+                        <br>
+                        <img src="${todoItem[index].Day2.Evening.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day2.Evening.Location}
+                        <br>
+
+                        <br>
+                        <img src="${todoItem[index].Day3.Evening.ImageURL}" height="100px " width="100px">
+                        <br>
+                        ${todoItem[index].Day3.Evening.Location}
+                    </td>
+                   
+                
+                `);
+
+            }
+
+
+
+
+            if (todoItem[index].OrderStatus === "尚未出發") {
+                $("#scorezone").empty();
+            }
+          
+
+
+        })
+
+
+        // 綁定輸入的評價 並且顯示到alert上面 以便確認有綁定
+        var write = document.getElementById("write");
+        var submitBtn = document.getElementById("submitBtn ");
+
+        function submitdata() {
+            var str = "";
+            var submitValue = write.value;
+            str = submitValue;
+            alert("給導遊" + currentRating + "顆星" + "\n" + "評價內容:" + str);
+
+        }
+
+        submitBtn.addEventListener("click", submitdata);
+    </script>
+
+
+    <footer class="text-center mt-5 p-3 shadow" style="height: 200px;">
+        <div class="row justify-content-center align-items-center text-center m-3">
+            <div class="col-3">
+                <h5>關於我們</h5>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-1">趣哪:旅遊網站</li>
+                    <li class="mb-1">可以自訂行程</li>
+                    <li class="mb-1">也可以媒合導遊</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h5>聯絡我們</h5>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-1">電話: 123-456-7890</li>
+                    <li class="mb-1">地址: 123 Main Street, Anytown, USA</li>
+                    <li class="mb-1">Email: 8bXrN@example.com</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h5>社群媒體</h5>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-1">Facebook</li>
+                    <li class="mb-1">Twitter</li>
+                    <li class="mb-1">Instagram</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

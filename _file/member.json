@@ -1,0 +1,42 @@
+[
+    {
+      "MemberID": "0021",
+      "Name": "游婷婷",
+      "E-mail": "jua78958@gmail.com",
+      "PhoneNumber": "0932259451",
+      "Birthday": "1998-05-02",
+      "Password": "5465465WEwerwer"
+    },
+    {
+      "MemberID": "0022",
+      "Name": "Alice",
+      "E-mail": "alice@example.com",
+      "PhoneNumber": "0912345678",
+      "Birthday": "1990-12-15",
+      "Password": "qwerty123"
+    },
+    {
+      "MemberID": "0023",
+      "Name": "Bob",
+      "E-mail": "bob@example.com",
+      "PhoneNumber": "0987654321",
+      "Birthday": "1985-07-20",
+      "Password": "password456"
+    },
+    {
+      "MemberID": "0024",
+      "Name": "Charlie",
+      "E-mail": "charlie@example.com",
+      "PhoneNumber": "0923456789",
+      "Birthday": "1993-03-08",
+      "Password": "abc123xyz"
+    },
+    {
+      "MemberID": "0025",
+      "Name": "David",
+      "E-mail": "david@example.com",
+      "PhoneNumber": "0956789012",
+      "Birthday": "1987-09-25",
+      "Password": "david789"
+    }
+  ]

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趣哪-導遊詳細資料</title>
+
+
+  <!-- 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+
+  <!-- header樣式 -->
+  <link rel="stylesheet" href="./_style/myshare.css">
+
+  <style>
+
+    .nav-center {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #標題 {
+      background-color: #ffffff;
+      height: 150px;
+      line-height: 150px;
+    }
+ 
+    .rank-rated {
+      color: #f6be00;
+    }
+
+    .rank-not-rated {
+      color: #a2a2a2;
+    }
+
+    .rank-half-rated {
+      background: linear-gradient(to right, #f6be00 50%, #eee 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+  </style>
+
+
+</head>
+
+
+<body>
+     <header>
+        <div class="container-fluid px-0 ">
+            <div class="row row-cols-1">
+                <div class="col">
+                    <div class="col fixed-top"> <!-- 固定上方 -->
+
+
+                        <nav class="navbar navbar-expand-sm " id="head">
+                            <img src="./_img/logo.png" alt="" width="200px">
+                            <div class="container-fluid justify-content-end  px-0">
+                                <!-- 大小切換 -->
+                                <button type="button" class="btn btn-outline-secondary m-1" id="big">大</button>
+                                <button type="button" class="btn btn-outline-secondary m-2" id="sm">小</button>
+                                <!-- 頁首 -->
+                                <ul class="navbar-nav ">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">旅遊資訊</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">自訂行程</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">景點介紹</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">會員登入</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+    </header>
+
+
+  <!-- 標題 -->
+  <div class="nav-center" id="標題" style="color: #eef1ff; background-color: #4e5482; font-size: 24px;">
+    導遊詳細資料
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-5 text-end">
+
+      <img id="display_img" src="./_img/png/導遊.png" style="border-radius: 50%;" height="185px " width="185px">
+
+      <br>
+      <br>
+
+      <div style='background-color: #e8eafe'>
+
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="col-7 text-start">
+      <h1>派大星</h1>
+      <span style="color: #f6be00;">4.6</span>
+
+      <span id="star">
+
+        <span class="rank-rated" data-rating="1">&#128970;</span>
+        <span class="rank-rated" data-rating="2">&#128970;</span>
+        <span class="rank-rated" data-rating="3">&#128970;</span>
+        <span class="rank-rated" data-rating="4">&#128970;</span>
+        <span class="rank-half-rated " data-rating="5">&#128970;</span>
+        <span id="score" style="color: #3A326D; font-size: 15px;"></span>
+      </span>
+      <span style="color: #a2a2a2;">(5)</span>
+      <br>
+
+      <span class="bi bi-trophy" style="color: #a2a2a2; font-size: 15px;">10次雇用</span>
+
+      <br>
+      <span>
+        性別:男生
+        <br>
+        導遊年資:5年
+        <br>
+        主要服務地區:北部、中部
+        <br>
+
+      </span>
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <!-- 訂單資訊 -->
+
+  <div style="width: 50%; margin: 0 auto">
+    <div class="d-flex row justify-content-center m-3 p-3 bg-light rounded shadow text-center">
+
+      <h1 class="text-start">自我介紹</h1>
+      <hr>
+      <br>
+      <p style="font-size: 17px;">精通中文與日文，在歷史和文化方面可以提供客戶詳細的講解。
+        <br>
+        除此之外，平時愛好攝影，也喜歡美食探店，
+        <br>
+        可以滿足顧客其他方面的多種需求。
+      </p>
+
+      <br>
+
+
+
+      <hr>
+
+    </div>
+  </div>
+
+
+  <br>
+  <div style="width: 50%; margin: 0 auto">
+    <div class="d-flex row justify-content-center m-3 p-3 bg-light rounded shadow text-center">
+
+      <h1 class="text-start">評價</h1>
+      <hr>
+
+      <br>
+
+      <span class="text-start">小瓜:
+        <span class="text-start" style="color: #f6be00;">4.0
+          <span class="rank-rated" data-rating="1">&#128970;</span>
+          <span class="rank-rated" data-rating="2">&#128970;</span>
+          <span class="rank-rated" data-rating="3">&#128970;</span>
+          <span class="rank-rated" data-rating="4">&#128970;</span>
+          <span class="rank-not-rated" data-rating="5">&#128970;</span>
+        </span>
+        <br>
+
+        <span class="text-start" style="font-size:20px;">超讚~~~~</span></span>
+      <br>
+
+      <br>
+      <br>
+      <hr>
+
+      <br>
+
+      <span class="text-start">章魚:
+        <span class="text-start" style="color: #f6be00;">5.0
+          <span class="rank-rated" data-rating="1">&#128970;</span>
+          <span class="rank-rated" data-rating="2">&#128970;</span>
+          <span class="rank-rated" data-rating="3">&#128970;</span>
+          <span class="rank-rated" data-rating="4">&#128970;</span>
+          <span class="rank-rated" data-rating="5">&#128970;</span>
+        </span>
+        <br>
+
+        <span class="text-start" style="font-size:20px;">派大星服務周到，解說也很詳細，讓我體驗一場深度文化之旅</span></span>
+      <br>
+
+      <br>
+      <br>
+      <hr>
+
+      <br>
+
+      <span class="text-start">寶寶:
+        <span class="text-start" style="color: #f6be00;">5.0
+          <span class="rank-rated" data-rating="1">&#128970;</span>
+          <span class="rank-rated" data-rating="2">&#128970;</span>
+          <span class="rank-rated" data-rating="3">&#128970;</span>
+          <span class="rank-rated" data-rating="4">&#128970;</span>
+          <span class="rank-rated" data-rating="5">&#128970;</span>
+        </span>
+        <br>
+
+        <span class="text-start" style="font-size:20px;">下次還要找派大星</span></span>
+      <br>
+
+      <br>
+      <br>
+      <hr>
+
+      <br>
+
+      <span class="text-start">泡芙:
+        <span class="text-start" style="color: #f6be00;">4.0
+          <span class="rank-rated" data-rating="1">&#128970;</span>
+          <span class="rank-rated" data-rating="2">&#128970;</span>
+          <span class="rank-rated" data-rating="3">&#128970;</span>
+          <span class="rank-rated" data-rating="4">&#128970;</span>
+          <span class="rank-not-rated" data-rating="5">&#128970;</span>
+        </span>
+        <br>
+
+        <span class="text-start" style="font-size:20px;">專業知識沒話說，但唯一缺點是會抽菸</span></span>
+      <br>
+
+      <br>
+      <br>
+      <hr>
+
+      <br>
+
+      <span class="text-start">小皮:
+        <span class="text-start" style="color: #f6be00;">5.0
+          <span class="rank-rated" data-rating="1">&#128970;</span>
+          <span class="rank-rated" data-rating="2">&#128970;</span>
+          <span class="rank-rated" data-rating="3">&#128970;</span>
+          <span class="rank-rated" data-rating="4">&#128970;</span>
+          <span class="rank-rated" data-rating="5">&#128970;</span>
+        </span>
+        <br>
+
+        <span class="text-start" style="font-size:20px;">最愛派大星</span></span>
+      <br>
+
+      <br>
+      <br>
+
+
+    </div>
+  </div>
+  <br>
+
+
+
+
+
+
+  <footer class="text-center mt-5 p-3 shadow" style="height: 200px;">
+    <div class="row justify-content-center align-items-center text-center m-3">
+      <div class="col-3">
+        <h5>關於我們</h5>
+        <hr>
+        <ul class="list-unstyled">
+          <li class="mb-1">趣哪:旅遊網站</li>
+          <li class="mb-1">可以自訂行程</li>
+          <li class="mb-1">也可以媒合導遊</li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h5>聯絡我們</h5>
+        <hr>
+        <ul class="list-unstyled">
+          <li class="mb-1">電話: 123-456-7890</li>
+          <li class="mb-1">地址: 123 Main Street, Anytown, USA</li>
+          <li class="mb-1">Email: 8bXrN@example.com</li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h5>社群媒體</h5>
+        <hr>
+        <ul class="list-unstyled">
+          <li class="mb-1">Facebook</li>
+          <li class="mb-1">Twitter</li>
+          <li class="mb-1">Instagram</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- header樣式 -->
+    <link rel="stylesheet" href="./_style/myshare.css">
+
+   
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid px-0 ">
+          <div class="row row-cols-1">
+            <div class="col">
+              <div class="col fixed-top"> <!-- 固定上方 -->
+    
+    
+                <nav class="navbar navbar-expand-sm " id="head">
+                  <img src="./_img/logo.png" alt="" width="200px">
+                  <div class="container-fluid justify-content-end  px-0">
+                    <!-- 大小切換 -->
+                    <button type="button" class="btn btn-outline-secondary m-1" id="big">大</button>
+                    <button type="button" class="btn btn-outline-secondary m-2" id="sm">小</button>
+                    <!-- 頁首 -->
+                    <ul class="navbar-nav ">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">旅遊資訊</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">自訂行程</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">景點介紹</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">會員登入</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+      </header>
+    
+    
+    
+
+
+    <div class="container">
+
+        <div>
+            <h1 class="text-center">TripNa Member Center</h1>
+
+            <h4 id="title" class="text-center"> 會員中心</h4>
+        </div>
+
+
+
+        <br>
+
+        <div id="topIcon" class="row">
+
+            <div class="col-sm-2 text-center"></div>
+
+            <div class="col-sm-8 text-center">
+                <a href="myorder.html"><img src="./_img/png/myorder.png" alt=""></a>
+                <a href="mycoupon.html"><img src="./_img/png/coupon.png" alt=""></a>
+                <a href="mycollect.html"><img src="./_img/png/likelist.png" alt=""></a>
+                <a href="/mydata.html"><img src="./_img/png/click_mydata.png" alt=""></a>
+                <a href="/sign.html"><img src="./_img/png/sign.png" alt=""></a>
+            </div>
+
+
+            <div class="col-sm-2 text-center"></div>
+
+        </div>
+        <hr style='background-color:#3A326D; height:1px; border:none;'>
+        <br>
+        <br>
+
+        <div class="row">
+
+            <div class="col-sm-2">
+            </div>
+
+            <div class="col-sm-4">
+
+                <div style='border:1px solid #3A326D ; padding-top:10px; padding-left: 10px;'>
+                    <p>12月內累積消費金額</p>
+                    <p>NT$_________</p>
+                    <p>(普通會員)</p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <div id="userData"
+                    style='border:1px solid #3A326D ; padding-top:10px; padding-left:10px; padding-bottom:10px;'>
+
+
+                    <label for="userName">姓名</label>
+                    <br>
+                    <input type="text" id="userName" name="userName" style="resize:none; height: 30px ; width:90% ;"
+                        value="游婷婷">
+
+
+                    <br>
+
+                    <label for="userEmail">E-mail</label>
+                    <br>
+                    <input type="text" id="userEmail" name="userEmail" style="resize:none; height: 30px ; width:90% ;"
+                        value="jua78958@gmail.com">
+
+                    <br>
+
+                    <label for="userPhone">行動電話</label>
+                    <br>
+                    <input type="text" id="userPhone" name="userPhone" style="resize:none; height: 30px ; width:90% ;"
+                        value="0932259451">
+
+                    <br>
+                    <label for="userBirthday">生日</label>
+                    <br>
+                    <input type="date" id="userBirthday" name="userBirthday"
+                        style="resize:none; height: 30px ; width:90% ;" disabled="disabled" value="1998-05-02">
+
+                    <br>
+                    <br>
+
+                    <a href="javascript:"
+                        onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'">修改密碼</a>
+
+                    <div class="block" id="fullContent" style="display:none;">
+                        <label for="userPassword">重設密碼(不修改則不需輸入)</label>
+                        <br>
+                        <textarea id="userPassword" name="userPassword"
+                            style="resize:none; height: 30px ; width:90% ;">********</textarea>
+                        <br>
+                        <label for="userRePassword">請再輸入一次密碼</label>
+                        <br>
+                        <textarea id="userRePassword" name="userRePassword"
+                            style="resize:none; height: 30px ; width:90% ;">********</textarea>
+                        <br>
+                    </div>
+
+
+
+                    <br>
+                    <br>
+
+
+
+                    <div class="text-center" style=" margin-right:10px; ">
+
+                        <button id="submitBtn" class="btn"
+                            style="width: 130px;background-color: #4e5482 ;color: #e8eafe;">修改✓</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+
+    <script>
+
+        var getUrl = "./_file/member.json";
+
+
+        $("#userName,#userEmail,#userPhone,#userBirthday").val("");
+
+        $.get(getUrl, function (e) {
+
+            var a = 0;
+            $("#userName").val(e[a].Name);
+            $("#userEmail").val(e[a]["E-mail"]);
+            $("#userPhone").val(e[a].PhoneNumber);
+            $("#userBirthday").val(e[a].Birthday);
+
+
+        })
+
+
+
+
+
+
+
+
+        // 綁定輸入的姓名 信箱 電話  並且顯示到alert上面 以便確認有綁定
+        var Name = document.getElementById("userName").value;
+        var Email = document.getElementById("userEmail").value;
+        var Phone = document.getElementById("userPhone").value;
+
+
+        var submitBtn = document.getElementById("submitBtn");
+
+        function submitdata() {
+            var str = "";
+            var submitValue = name.value;
+            str = submitValue;
+            alert(`${Name}+${Email}+${Phone}`);
+        }
+
+        submitBtn.addEventListener("click", submitdata);
+    </script>
+
+    <footer class="text-center mt-5 p-3 shadow" style="height: 200px;">
+        <div class="row justify-content-center align-items-center text-center m-3">
+            <div class="col-3">
+                <h5>關於我們</h5>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-1">趣哪:旅遊網站</li>
+                    <li class="mb-1">可以自訂行程</li>
+                    <li class="mb-1">也可以媒合導遊</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h5>聯絡我們</h5>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-1">電話: 123-456-7890</li>
+                    <li class="mb-1">地址: 123 Main Street, Anytown, USA</li>
+                    <li class="mb-1">Email: 8bXrN@example.com</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h5>社群媒體</h5>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="mb-1">Facebook</li>
+                    <li class="mb-1">Twitter</li>
+                    <li class="mb-1">Instagram</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
